@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=14:antialias=true:autohint=true";
+static char *font = "Mononoki Nerd Font:pixelsize=15:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -93,6 +93,8 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
+float alpha = 0.87, alphaUnfocused = 0.8;
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
@@ -133,7 +135,7 @@ unsigned int defaultfg = 258;
 unsigned int defaultbg = 259;
 unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
-
+unsigned int bg = 0, bgUnfocused = 16;
 /*
  * Default shape of cursor
  * 2: Block ("█")
